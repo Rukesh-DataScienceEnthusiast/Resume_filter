@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filtered Resumes</title>
+</head>
+<body>
+    <h1>Resumes with Relevant Skills</h1>
+    <ul>
+        {% for resume, skills in resumes.items() %}
+            <li>
+                <strong>{{ resume }}</strong> - Skills:
+                <ul>
+                    {% for skill in skills %}
+                        <li>{{ skill }}</li>
+                    {% endfor %}
+                </ul>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
